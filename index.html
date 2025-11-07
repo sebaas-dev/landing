@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Landing | Tu Marca</title>
+    <meta name="description" content="Descripción corta de tu landing." />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <nav class="nav">
+        <a class="logo" href="#">sebasdev</a>
+        <a class="nav__link" href="#servicios">Servicios</a>
+        <a class="nav__link" href="#contacto">Contacto</a>
+      </nav>
+      <section class="hero">
+        <h1>Desarrollo webs rápidas para tu negocio</h1>
+        <p>Landing pages optimizadas para convertir visitas en clientes.</p>
+        <a class="btn" href="#contacto">Hablemos</a>
+      </section>
+    </header>
+
+    <main>
+      <section id="servicios" class="container grid">
+        <article class="card">
+          <h2>Velocidad y SEO</h2>
+          <p>Páginas ligeras que cargan rápido y se posicionan mejor.</p>
+        </article>
+        <article class="card">
+          <h2>Soporte mensual</h2>
+          <p>Actualizaciones, cambios de texto y monitoreo básico.</p>
+        </article>
+        <article class="card">
+          <h2>Soporte</h2>
+          <p>Mantenimiento y mejoras continuas.</p>
+        </article>
+        <article class="card">
+          <h2>beeeep</h2>
+        <p>boooop</p>
+        </article>
+      </section>
+
+      <section id="contacto" class="container contacto">
+        <h2>Contáctanos</h2>
+        <form id="form-contacto" aria-label="Formulario de contacto">
+          <label>
+            <span>Nombre</span>
+            <input name="nombre" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            <span>Mensaje</span>
+            <textarea name="mensaje" rows="4" required></textarea>
+          </label>
+          <button class="btn" type="submit">Enviar</button>
+        </form>
+        <p id="state" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <small>© <span id="year"></span> TuMarca — Todos los derechos reservados.</small>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
