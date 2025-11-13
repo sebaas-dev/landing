@@ -60,6 +60,28 @@ body {
   display: grid;
   gap: 12px;
 }
+.hero__row {
+  display: flex;          /* Pone hero__text y hero__media en fila */
+  gap: 24px;              /* Espacio entre las dos columnas */
+  align-items: center;    /* Centra verticalmente el contenido */
+}
+
+.hero__text {
+  flex: 1;                /* Esta columna ocupa la mitad del ancho disponible */
+}
+
+.hero__media {
+  flex: 1;                /* Esta también ocupa la otra mitad */
+  min-height: 220px;      /* Altura mínima para que se vea como un recuadro */
+  border-radius: 16px;
+  background: radial-gradient(120% 120% at 20% 20%, #3b82f6 0%, #1d4ed8 50%, #111827 100%);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.18);
+}
+@media (max-width: 900px) {
+  .hero__row {
+    flex-direction: column; /* En pantallas pequeñas, en vez de fila los apila */
+  }
+}
 
 /* BOTÓN */
 .btn {
@@ -78,7 +100,7 @@ body {
 .grid {
   display: grid;
   gap: var(--spacing);
-  grid-template-columns: repeat(auto-fit, minmax(260pc, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   padding: 40px 0;
 }
 
@@ -117,6 +139,45 @@ textarea {
   border-top: 1px solid #eee;
   margin-top: 40px;
   text-align: center;
+}
+/* FLUJO DE TRABAJO (3 pasos) */
+.flow {
+  padding: 48px 0;
+}
+
+.flow h2 {
+  margin-bottom: 8px;
+}
+
+.flow__intro {
+  margin: 0 0 24px;
+  max-width: 540px;
+}
+
+.flow__list {
+  list-style: none;              /* quita numeritos por defecto */
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--spacing);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.flow__item {
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-soft);
+  padding: 16px 18px;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
+}
+
+.flow__item h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+.flow__item p {
+  margin: 0;
 }
 
 /* RESPONSIVE */
