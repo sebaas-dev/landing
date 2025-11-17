@@ -179,6 +179,50 @@ textarea {
 .flow__item p {
   margin: 0;
 }
+/* FAQ */
+.faq {
+  padding: 48px 0;
+}
+
+.faq__intro {
+  margin: 0 0 24px;
+  max-width: 540px;
+}
+
+.faq__list {
+  display: grid;
+  gap: 12px;
+}
+
+.faq__item {
+  border-radius: var(--radius);
+  border: 1px solid var(--border-soft);
+  background-color: var(--card-bg);
+  padding: 8px 12px;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
+}
+
+.faq__question {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 8px 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq__answer {
+  margin: 0;
+  padding: 0 4px 8px;
+  display: none; /* oculto por defecto */
+}
+
+/* cuando el item tiene la clase is-open, mostramos la respuesta */
+.faq__item.is-open .faq__answer {
+  display: block;
+}
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
